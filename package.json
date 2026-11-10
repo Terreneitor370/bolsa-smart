@@ -1,0 +1,16 @@
+{
+  "name": "bolsa-smart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Senal de entrada a bolsa y ETFs: app movil + smartwatch (Wear OS)",
+  "scripts": {
+    "sync": "node scripts/sync-shared.js",
+    "test": "tsx scripts/test-signals.ts",
+    "install:all": "npm install && npm --prefix mobile install && npm --prefix watch install",
+    "mobile": "npm run sync && npm --prefix mobile start",
+    "watch": "npm run sync && npm --prefix watch start"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0"
+  }
+}
